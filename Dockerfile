@@ -1,4 +1,7 @@
-FROM python:3
+FROM python:3.6
 
+COPY . .
 RUN pip install -r requirements.txt
-RUN python app.py
+
+ENTRYPOINT [ "python" ]
+CMD [ "app.py" ]
